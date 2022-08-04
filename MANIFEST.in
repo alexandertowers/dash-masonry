@@ -1,0 +1,11 @@
+include dash_masonry/dash_masonry.min.js
+include dash_masonry/dash_masonry.min.js.map
+include dash_masonry/async-*.js
+include dash_masonry/async-*.js.map
+include dash_masonry/*-shared.js
+include dash_masonry/*-shared.js.map
+include dash_masonry/metadata.json
+include dash_masonry/package-info.json
+include README.md
+include LICENSE
+include package.json
