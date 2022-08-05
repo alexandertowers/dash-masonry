@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-''DashMasonry <- function(id=NULL, label=NULL, value=NULL) {
+''DashMasonry <- function(children=NULL, className=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(children=children, className=className)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@
         props = props,
         type = 'DashMasonry',
         namespace = 'dash_masonry',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('children', 'className'),
         package = 'dashMasonry'
         )
 

@@ -4,21 +4,22 @@ export ''_dashmasonry
 
 """
     ''_dashmasonry(;kwargs...)
+    ''_dashmasonry(children::Any;kwargs...)
+    ''_dashmasonry(children_maker::Function;kwargs...)
+
 
 A DashMasonry component.
-ExampleComponent is an example component.
-It takes a property, `label`, and
-displays it.
-It renders an input with the property `value`
-which is editable by the user.
+
 Keyword arguments:
-- `id` (String; optional): The ID used to identify this component in Dash callbacks.
-- `label` (String; required): A label that will be printed when this component is rendered.
-- `value` (String; optional): The value displayed in the input.
+- `children` (a list of or a singular dash component, string or number; optional): Contents of grid.
+- `className` (String; optional): Style class of the component.
 """
 function ''_dashmasonry(; kwargs...)
-        available_props = Symbol[:id, :label, :value]
+        available_props = Symbol[:children, :className]
         wild_props = Symbol[]
         return Component("''_dashmasonry", "DashMasonry", "dash_masonry", available_props, wild_props; kwargs...)
 end
+
+''_dashmasonry(children::Any; kwargs...) = ''_dashmasonry(;kwargs..., children = children)
+''_dashmasonry(children_maker::Function; kwargs...) = ''_dashmasonry(children_maker(); kwargs...)
 
