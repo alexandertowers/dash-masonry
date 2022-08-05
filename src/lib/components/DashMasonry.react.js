@@ -7,13 +7,12 @@ export default class DashMasonry extends Component {
     render() {
         const {
             className,
-            // style,
-            children
+            children,
         } = this.props;
 
         return (
             <div className={className} >
-              <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
+              <ResponsiveMasonry columnsCountBreakPoints={{500: 1, 900: 2}}>
                     <Masonry>
                         {children}
                     </Masonry>
@@ -30,11 +29,6 @@ DashMasonry.propTypes = {
      * Style class of the component.
      */ 
     className: PropTypes.string,
-    
-    /**
-     * Inline style of the component.
-     */
-    //  style: PropTypes.object,
 
      /**
      * Contents of grid.
